@@ -1,8 +1,10 @@
 <template>
   <v-app dark> 
     <v-main>
-      <v-container>
+      <v-container fluid class="pa-0">
+          <MenuBar />
         <nuxt />
+        <Footer />
       </v-container>
     </v-main>
   </v-app>
@@ -10,6 +12,10 @@
 
 <script>
 export default {
+   components: {
+    MenuBar,
+    Footer
+  },
   data () {
     return {
       clipped: false,
@@ -34,4 +40,6 @@ export default {
     }
   }
 }
+import MenuBar from '@/components/MenuBar.vue'
+import Footer from '@/components/Footer.vue'
 </script>

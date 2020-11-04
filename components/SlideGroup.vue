@@ -1,7 +1,7 @@
 <template>
-            <v-slide-group v-model="model" class="pa-6" show-arrows="true">
+            <v-slide-group v-model="model" class="pa-6" show-arrows="true" continuous="true">
           <v-slide-item v-for="n in 13" :key="n">
-            <v-card flat tile height="800" width="610" class= "shade">
+            <v-card flat tile height="400" width="300" class= "shade">
               <v-img
                 :src="require(`@/assets/images/${n}.png`)"
                 :lazy-src="require(`@/assets/images/${n}.png`)"
@@ -19,7 +19,7 @@
                 <v-dialog
                   v-model="dialog"
                   max-width="500"
-                  scrollable="false"
+                  :scrollable='false'
                   overlay-opacity ="0.15"
 
                 >
