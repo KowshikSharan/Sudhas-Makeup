@@ -1,20 +1,24 @@
 <template>
-  <v-row class="ma-5 d-flex justify-center">
-      <v-col cols="12" class="d-flex justify-center">
-    <h1 id="services">Services</h1>
-      </v-col>
-    <v-row class="card">
+  <v-row class="pa-2">
+    <v-col cols="12" class="d-flex justify-center">
+      <h1 class="text" id="services">Services</h1>
+    </v-col>
+    <v-col  cols="12" xl="6" lg="6" md="6" v-for="(item, i) in items" :key="i">
+
+    <v-row class="card" >
       <v-col
         cols="12"
         xl="3"
         lg="3"
         md="3"
-        class="d-flex justify-start justify-sm-center"
+        sm="3"
+        xs="3"
+        class="d-flex justify-center "
       >
         <v-img
-          max-width="200px"
+          width="300px"
           contain
-          :src="require('../assets/images/model.png')"
+          :src="item.src"
         />
       </v-col>
       <v-col
@@ -22,78 +26,73 @@
         xl="9"
         lg="9"
         md="9"
-        class="d-flex justify-end justify-sm-center"
+        sm="9"
+        xs="9"
+        class="d-flex flex-column align-center align-xl-start align-lg-start align-md-start"
       >
-        <p>
-          Model Photoshoot All kinds of traditional, western and bridal model
-          shoot is undertaken
+        <h3 class="text">{{item.title}}</h3>
+        <p class="text" align="justify">
+         {{item.description}}
         </p>
       </v-col>
     </v-row>
-    <v-row class="card">
-      <v-col>
-        <v-img
-          :src="require('../assets/images/bridal.png')"
-          max-width="200px"
-          contain
-        ></v-img>
-      </v-col>
-      <v-col>
-        Bridal Makeup May one's love continue to grow everyday starting with a
-        special day.Choose our makeup services to make the day extra special.
-        Makeup services for marriages and receptions are undertaken.
-      </v-col>
-    </v-row>
-    <v-row class="card">
-      <v-col>
-        <v-img
-          :src="require('../assets/images/hd.png')"
-          contain
-          max-width="200px"
-        ></v-img>
-      </v-col>
-      <v-col>
-        HD|3D Makeup HD and 3D makeup is where we contour and soften your look
-        to give a more refined makeover.
-      </v-col>
-    </v-row>
-    <v-row class="card">
-      <v-col>
-        <v-img
-          :src="require('../assets/images/hairstyle.png')"
-          contain
-          max-width="200px"
-        ></v-img>
-      </v-col>
-      <v-col>
-        Hair Styling and Hair Do's Accentuate your look by dressing your hair
-        like a medieval princess or like a modern go-getter. We provide hair
-        dressing services for all occasions.
-      </v-col>
-    </v-row>
-    <v-row class="card">
-      <v-col>
-        <v-img :src="require('../assets/images/home.png')" contain
-          max-width="200px"></v-img> </v-col
-      ><v-col>
-        Home Makeup Sevices Glam yourself up at the comfort of your home with
-        our home makeup services.
-      </v-col>
-    </v-row>
-    <v-row class="card">
-      <v-col>
-        <v-img :src="require('../assets/images/class.png')" contain
-          max-width="200px"></v-img> </v-col
-      ><v-col>
-        Makeup Classes Learn more on how to do makeups and hairstyles
-        professionally with Sudha's makeup classes
-      </v-col>
-    </v-row>
+</v-col>
   </v-row>
 </template>
-<style>
+
+<script>
+export default {
+  data: () => ({
+    items: [
+      {
+        src: require('../assets/images/model.png'),
+        title: 'Model Photoshoot',
+        description:
+          'All kinds of traditional, western and bridal modelshoot is undertaken',
+      },
+      {
+        src: require('../assets/images/bridal.png'),
+        title: 'Bridal Makeup',
+        description:
+          'May ones love continue to grow everyday starting with a special day.Choose our makeup services to make the day extra special. Makeup services for marriages and receptions are undertaken.',
+      },
+      {
+        src: require('../assets/images/hd.png'),
+        title: 'HD|3D Makeup',
+        description:
+          'HD and 3D makeup is where we contour and soften your look to give a more refined makeover.',
+      },
+      {
+        src: require('../assets/images/hairstyle.png'),
+        title: 'Hair Styling and Hair Do',
+        description:
+          'Accentuate your look by dressing your hair like a medieval princess or like a modern go-getter. We provide hair dressing services for all occasions.',
+      },
+      {
+        src: require('../assets/images/home.png'),
+        title: 'Home Makeup Sevices',
+        description:
+          'Glam yourself up at the comfort of your home with our home makeup services.',
+      },
+      {
+        src: require('../assets/images/class.png'),
+        title: 'Makeup Classes',
+        description:
+          'Learn more on how to do makeups and hairstyles professionally with Sudhas makeup classes',
+      },
+    ],
+  }),
+}
+</script>
+
+<style lang="scss">
+@import '~/assets/variables.scss';
 .card {
-    background-color:#272727;
-    margin: 10px;
+  background-color: $primary-color;
+  margin: 10px;
+  border-radius: 10px;
+}
+.text {
+  color: $text-color;
 }
 </style>

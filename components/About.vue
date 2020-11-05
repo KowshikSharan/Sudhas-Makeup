@@ -1,12 +1,12 @@
 <template>
-  <v-row class="ma-5 d-flex justify-center">
-    <h1 id="about">About</h1>
-    <v-row>
+  <v-row class="ma-7 d-flex justify-center">
+    <h1 class="aboutText" id="about">About</h1>
+    <v-row class="about">
       <v-col cols="12" xl="3" lg="3" md="3" class="d-flex justify-center">
           <v-img :src="require('../assets/images/about.png')" max-width="200px" contain></v-img>
       </v-col>
-<v-col cols="12" xl="9" lg="9" md="9" class="d-flex justify-center">
-            <p class="about blockquote">
+<v-col cols="12" xl="8" lg="8" md="8" class="d-flex justify-center">
+            <p class="aboutText">
               As per Sudha’s saying, "Beauty is the illumination of your soul
               and Makeup is a tool meant to magnify the beauty that already
               exists inside. Sudha has been in this beauty industry for the
@@ -29,3 +29,12 @@
     </v-row>
   </v-row>
 </template>
+<style lang="scss">
+@import '~/assets/variables.scss';
+.about {
+  background-color: $primary-color;
+}
+.aboutText {
+  color: $text-color;
+}
+</style>
