@@ -3,11 +3,11 @@
           <v-slide-item class="slider" v-for="n in 13" :key="n">
             <v-card color="#FEEAE6" flat tile height="400" width="300" class= "shade">
               <v-img
-                :src="require(`@/assets/images/${n}.png`)"
-                :lazy-src="require(`@/assets/images/${n}.png`)"
+                :src="require(`@/assets/images/${n}.jpg`)"
+                :lazy-src="require(`@/assets/images/${n}.jpg`)"
                 aspect-ratio="0.67"
                 class="slider"
-                @click.stop="dialogfn(require(`@/assets/images/${n}.png`))"
+                @click.stop="dialogfn(require(`@/assets/images/${n}.jpg`))"
               >
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0 slider" align="center" justify="center">

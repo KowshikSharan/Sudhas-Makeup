@@ -45,37 +45,37 @@ export default {
   data: () => ({
     items: [
       {
-        src: require('../assets/images/model.png'),
+        src: require('../assets/images/model.jpg'),
         title: 'Model Photoshoot',
         description:
           'All kinds of traditional, western and bridal modelshoot is undertaken',
       },
       {
-        src: require('../assets/images/bridal.png'),
+        src: require('../assets/images/bridal.jpg'),
         title: 'Bridal Makeup',
         description:
           'May ones love continue to grow everyday starting with a special day.Choose our makeup services to make the day extra special. Makeup services for marriages and receptions are undertaken.',
       },
       {
-        src: require('../assets/images/hd.png'),
+        src: require('../assets/images/hd.jpg'),
         title: 'HD|3D Makeup',
         description:
           'HD and 3D makeup is where we contour and soften your look to give a more refined makeover.',
       },
       {
-        src: require('../assets/images/hairstyle.png'),
+        src: require('../assets/images/hairstyle.jpg'),
         title: 'Hair Styling and Hair Do',
         description:
           'Accentuate your look by dressing your hair like a medieval princess or like a modern go-getter. We provide hair dressing services for all occasions.',
       },
       {
-        src: require('../assets/images/home.png'),
+        src: require('../assets/images/home.jpg'),
         title: 'Home Makeup Sevices',
         description:
           'Glam yourself up at the comfort of your home with our home makeup services.',
       },
       {
-        src: require('../assets/images/class.png'),
+        src: require('../assets/images/class.jpg'),
         title: 'Makeup Classes',
         description:
           'Learn more on how to do makeups and hairstyles professionally with Sudhas makeup classes',

@@ -3,7 +3,7 @@
     <h1 class="aboutText" id="about">About</h1>
     <v-row class="about">
       <v-col cols="12" xl="3" lg="3" md="3" class="d-flex justify-center">
-          <v-img :src="require('../assets/images/about.png')" max-width="200px" contain></v-img>
+          <v-img :src="require('../assets/images/about.jpg')" max-width="200px" contain></v-img>
       </v-col>
 <v-col cols="12" xl="8" lg="8" md="8" class="d-flex justify-center">
             <p class="aboutText">
